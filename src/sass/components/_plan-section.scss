@@ -1,0 +1,119 @@
+#plan {
+	min-height: 100vh;
+	height: auto;
+	padding: 1rem 0;
+	background-color: #fff;
+	@include display-flex(1);
+	flex-direction: column;
+	justify-content: flex-start;
+
+	h5 {
+		color: darken($purple-color, 30%);
+		font-size: 2rem;
+		//top: -2rem;
+	}
+
+	p {
+		//background-color: $pink-color;
+		text-align: center;
+		padding: 0 2rem;
+		color: darken($dark-color, 30%);
+
+		@include medium-devices() {
+			width: 70%;
+		}
+	}
+
+	.plan-badge {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		background-color: $purple-color;
+		width: 80%;
+		height: 400px;
+		border-radius: 5%;
+		box-shadow: -1px 3px 12px 5px rgba(0,0,0,0.75);
+		text-align: center;
+		display: grid;
+		grid-template-rows: 20% 10% 1fr;
+
+		@include small-devices() {
+			width: 500px;
+
+			margin-bottom: 0;
+		}
+
+		.plan-name {
+			width: 100%;
+			height: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			//background-color: #fff;
+
+			span {
+				font-weight: 700;
+				font-size: 2rem;
+				color: lighten(#999900, 10%);
+			}
+		}
+
+		.plan-price {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+
+			hr {
+				width: 70%;
+				color: $dark-color;
+				text-shadow: 0px 0px 6px rgba(150, 150, 150, 1);
+			}
+
+			p {
+				font-weight: 700;
+				font-size: 0.8rem;
+				color: darken($purple-color, 30%);
+			}
+
+			span {
+				font-size: 1.5rem;
+				color: #fff;
+			}
+		}
+
+		.plan-description {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding: 0.3rem 2rem;
+			margin-bottom: 1rem;
+
+			h5 {
+				align-self: center;
+				margin-top: 0.6rem;
+				margin-bottom: 0.8rem;
+			}
+
+			ul {
+				list-style-type: circle;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+
+				@include medium-devices() {
+					padding: 0 2rem;
+				}
+
+				li { 
+					color: darken($purple-color, 30%);
+
+					@include medium-devices() {
+						//align-self: center;
+					}
+				}
+			}
+		}
+	}
+}

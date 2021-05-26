@@ -1,0 +1,53 @@
+@mixin add-image($url) {
+    background-image: url('../images/' + $url);
+}
+
+@mixin transition-enter($enter) {
+  animation: enter $enter 0 none;
+}
+
+@mixin center-flex () {
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin display-flex($center-flex) {
+    display: flex;
+    @if($center-flex == 1) {
+        @include center-flex();
+    }
+}
+
+@mixin section-background($url) {
+    @include add-image($url);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// MEDIA QUERY
+@mixin small-devices() {
+    @media (min-width: $small-devices) {
+        @content;
+    }
+}
+
+@mixin medium-devices() {
+    @media (min-width: $medium-devices) {
+        @content;
+    }
+}
+
+@mixin large-devices() {
+    @media (min-width: $large-devices) {
+        @content;
+    }
+}
+
+@mixin x-large-devices() {
+    @media (min-width: $x-large-devices) {
+        @content;
+    }
+}

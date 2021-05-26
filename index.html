@@ -1,12 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <script src="/assets/scripts/bundle.js" defer></script>
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/cffccf5116.js" crossorigin="anonymous"></script>
     <title>Functional gym</title>
 </head>
+
 <body>
-    
+
+    <button id="btn-nav">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- NAVIGATION -->
+    <div id="navigation">
+        <div class="links">
+            <ul class="link-list">
+                <li class="link">ABOUT</li>
+                <li class="link">PLANS</li>
+                <li class="link">INSTRUCTORS</li>
+                <li class="link">CONTACT</li>
+            </ul>      
+        </div>
+    </div>
+
+    <!-- HEADER SECTION -->
+    <header id="header">
+        <div class="header__first-section">
+            <div class="brand">
+                <img src="./assets/images/gym-functional-white.png" width="250px">
+            </div>
+        </div>
+        <div class="header__second-section">
+            <span id="display-information" class="information"></span>
+        </div>
+    </header>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about-us">
+        <article class="about-us__about">
+            <h5>Who are we?</h5>
+            <p>WE ARE A DEDICATED COMPANY TO GET THE BEST OF YOU.</p>
+            <p>YOU PUT THE EFFORT, WE PUT THE METHODS IN ORDER TO REACH YOUR GOAL!</p>
+        </article>
+
+<!--         <article class="about-us__classes">
+            <h5>What do we offer yo you?</h5>
+            <ul>
+                <li>Classes online</li>
+                <li>MEAL PLANS & ROUTINES BASED ON YOU</li>
+                <li>QUALITY, NATURAL PRODUCTS FOR TAKING CARE OF YOUR HEALTH</li>
+            </ul>
+        </article> -->
+    </section>
+
+    <!-- INSTRUCTORS SECTION-->
+    <section id="instructors">
+        <div class="instructors__header">
+            <h3>Our instructors</h3>
+            <p>We count not just with professionals, but certified instructors in order to guarantee to our clients the best experience, ever. </p>
+        </div>
+
+        <div id="instructor-container" class="instructor__container"></div>
+    </section>
+
+    <!-- PLAN SECTION -->
+    <section id="plan">
+        <h5>Our plans</h5>
+        <p>BECAUSE WE UNDERSTAND ALL PEOPLE HAVE DIFFERENT REQUIREMENTS,
+BUT THEY'RE ALL IMPORTANTS FOR US, <stron>WE HAVE JUST ONE PLAN!</strong></p>
+
+        <div class="plan-badge">
+            <div class="plan-name">
+                <span>PREMIUM</span>
+            </div>
+
+            <div class="plan-price">
+                <p><span>$450.00MXM</span> /monthly</p>
+                <hr>
+            </div>
+
+            <div class="plan-description">
+                <h5>Benefits</h5> 
+                <ul>
+                    <li>Access our classes online</li>
+                    <li>Access our video classes 24/7</li>
+                    <li>Disccount in products</li>
+                    <li>Dedicated routines for you</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact-us">
+        <div class="contact__header">
+            <h4>Contact us</h4>
+            <p>Write your info below and we will contact you!</p>
+        </div>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input id="name" type="text" name="name" placeholder="Name (required)"></input>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input id="lastname" type="text" name="lastname" placeholder="Lastname (required)">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                    <i class="fas fa-at"></i>
+                    <input id="email" type="text" name="email" placeholder="Email (required)">
+                </div>
+            </div>       
+            <div class="form-group">
+                <label for="phone">Contact phone</label>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input id="phone" type="phone" name="phone" placeholder="Phone... cell or home (optional)">
+                </div>
+            </div>    
+
+            <div class="button-group">
+                <button id="btnContactForm" type="submit">
+                    SEND <i class="fas fa-share"></i>
+                </button> 
+            </div>           
+        </form>
+    </section>
+
+    <!-- TEMPLATES -->
+    <!-- INSTRUCTOR TEMPLATE -->
+    <template id="template-instructor">
+        <div class="instructor">
+            <button class="closeInfo" type="button" hidden><i class="fas fa-times"></i></button>
+            <div class="instructor__image">
+                <img class="instructor__image--photo">
+            </div>
+            <h4 class="instructor__name"></h4>
+            <div class="instructor__bio">
+            </div>
+        </div>
+    </template>
+     <!-- INSTRUCTOR TEMPLATE -->
+
+     <!-- INFO TEMPLATE -->
+    <template id="template-instructor-info">
+            <p class="instructor__bio--info"></p>
+    </template>
+     <!-- INFO TEMPLATE -->
+
+     <!-- ALERT TEMPLATE -->
+     <template id="template-alert">
+         <div id="alert">
+             <span id="alert-message"></span>
+         </div>
+     </template>
 </body>
+
 </html>

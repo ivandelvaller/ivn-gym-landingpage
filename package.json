@@ -1,0 +1,20 @@
+{
+  "name": "gym-landingpage",
+  "version": "1.0.0",
+  "description": "Landing page for L2 functional gym",
+  "main": "index.js",
+  "scripts": {
+    "sass:w": "sass --watch src/sass/main.scss:assets/styles/main.css",
+    "build": "webpack",
+    "build:dev": "webpack serve"
+  },
+  "keywords": [],
+  "author": "Alberto Iván Del Valle Ramos",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

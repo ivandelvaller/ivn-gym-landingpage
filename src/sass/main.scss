@@ -1,0 +1,18 @@
+// Globals
+@import './settings/vars';
+@import './settings/base';
+@import './settings/config';
+@import './settings/keyframes';
+
+// mixins
+@import './settings/mixin';
+
+// Components
+@import './components/navigation';
+@import './components/header';
+@import './components/about-section';
+@import './components/instructors-section';
+@import './components/contact-us-section';
+@import './components/btn-nav.scss';
+@import './components/plan-section.scss';
+@import './components/alert.scss';

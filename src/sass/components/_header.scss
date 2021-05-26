@@ -1,0 +1,40 @@
+#header {
+    @include section-background('image-10.jpg');
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .header__first-section {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 40vh;
+        }
+    }
+    
+    .header__second-section {
+        @include display-flex(1);
+        align-items: flex-start;
+
+        .information {
+            margin-top: 3rem;
+            padding: 0 1rem;
+            text-shadow: 0px 0px 8px gray;
+            width: 80%;
+            text-align: center;
+            height: auto;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+
+            @include large-devices() {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
