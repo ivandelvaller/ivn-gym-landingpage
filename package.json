@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass:w": "sass --watch src/sass/main.scss:assets/styles/main.css",
-    "build": "webpack",
-    "build:dev": "webpack serve"
+    "build:dev": "webpack",
+    "build:devServer": "webpack serve",
+    "build:production": "webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "Alberto Iván Del Valle Ramos",

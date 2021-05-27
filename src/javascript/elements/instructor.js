@@ -65,7 +65,8 @@ instructors.forEach(instructor => {
 							opacity: 0.1
 						}], {
 							duration: 500,
-							fill: 'forwards'
+							fill: 'forwards',
+							easing: 'ease-out'
 						})
 				})
 				.then(() => {
@@ -75,7 +76,8 @@ instructors.forEach(instructor => {
 						}, {
 							transform: 'translateY(0)'
 						}, ], {
-							duration: 1000
+							duration: 1000,
+							easing: 'ease-out'
 						})
 				})
 				.then(() => {

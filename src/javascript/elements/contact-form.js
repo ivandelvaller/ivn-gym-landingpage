@@ -2,7 +2,7 @@
  *
  * @author Alberto Iván Del Valle Ramos
  */
-import DOM from '../DOMhelpers'
+import * as DOM from '../DOMhelpers'
 
 const $form = document.getElementById('contact-form')
 
@@ -34,7 +34,7 @@ $form.addEventListener('submit', event => {
 
 	// Check if values are correct
 	inputsList.forEach((input, index) => {
-		if(input.classList.contains('input-error')) {
+		if (input.classList.contains('input-error')) {
 			input.classList.toggle('input-error')
 		}
 
@@ -59,7 +59,7 @@ $form.addEventListener('submit', event => {
 			return
 		}
 
-		if((field['phone'] && fieldValue.length > 0) && (fieldValue.length !== 10 || typeof(fieldValue) !== 'number')) {
+		if ((field['phone'] && fieldValue.length > 0) && (fieldValue.length !== 10 || typeof(fieldValue) !== 'number')) {
 			errors.push({
 				field: fieldName,
 				errorMessage: 'Invalid phone'
@@ -72,14 +72,50 @@ $form.addEventListener('submit', event => {
 	if (errors.length > 0) {
 		errors.forEach(error => {
 			const input = document.getElementById(error.field)
-			if(!input.classList.contains('input-error')) {
-				input.classList.toggle('input-error')			
+			if (!input.classList.contains('input-error')) {
+				input.classList.toggle('input-error')
 			}
 		})
 		return
 	}
 
 	//Clear form values
+	const $modal = DOM.getNodeFromTemplate('template-modal')
+	const name = document.getElementById('name').value
+	$modal.querySelector('span').innerText = `Thanks ${name || ''}! We appreciate your preference. \n As soon as possible we get in contact to you! \nKeep yourself feet!`
+
+	if (!document.getElementById('modal')) {
+		document.querySelector('body').prepend($modal)
+
+		$modal.querySelector('.modal-badge').animate([{
+			transform: 'translateY(-100%)'
+		}, {
+			transform: 'translateY(0)'
+		}], {
+			duration: 1000,
+			fill: 'forwards',
+			easing: 'ease-in'
+		})
+	}
+
+	const $modalButton = document.getElementById('modal-button')
+	const handlerButton = event => {
+		const modal = document.getElementById('modal')
+		$modal.querySelector('.modal-badge').animate([{
+			transform: 'translateY(0)'
+		}, {
+			transform: 'translateY(-100%)'
+		}], {
+			duration: 1000,
+			fill: 'forwards',
+			easing: 'ease-out'
+		}).finished.then(() => {
+			if (modal) modal.remove()
+			$modalButton.removeEventListener('click', handlerButton)
+		})
+	}
+	$modalButton.addEventListener('click', handlerButton)
+
 	inputsList.forEach(input => {
 		input.value = ''
 	})

@@ -4,7 +4,7 @@
 
 import { startAnimation, toggleModal } from '../functions'
 
-const $btnNav = document.getElementById('btn-nav')
+export const $btnNav = document.getElementById('btn-nav')
 const $navBar = document.getElementById('navigation')
 
 const modalAnimatinOptions = {

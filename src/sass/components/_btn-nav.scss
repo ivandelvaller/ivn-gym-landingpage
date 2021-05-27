@@ -6,14 +6,15 @@
 	z-index: 200;
 	top: 1rem;
 	right: 1rem;
-	padding: 0 0.3rem;
-	font-size: 3rem;
 	cursor: pointer;
-	color: #fff;
+
+	image {
+		width: 30px;
+		height: 30px;
+	}
 
 
 	&:hover{
-		color: $pink-color;
 		transform: scale(1.1);
 		opacity: 0.9;
 	}
