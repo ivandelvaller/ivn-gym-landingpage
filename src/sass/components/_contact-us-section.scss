@@ -1,22 +1,21 @@
 #contact-us {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	display: grid;
+	grid-template-rows: 20% 80%;
 	color: darken($purple-color, 30%);
+	min-height: 100vh;
 	height: auto;
+	width: 100%;
 	background-color: rgb(206, 151, 176, 0.5);
 
-	@include medium-devices() {
-		@include display-flex(1);
-		flex-direction: column;
-	}
 
 	@include large-devices () {
-		justify-content: space-around;
 		@include section-background('image-11.jpg');
 	}
 
 	.contact__header {
+		width: 100%;
+		@include display-flex(1);
+		flex-direction: column;
 		text-align: center;
 		margin-top: 1rem;
 
@@ -27,11 +26,6 @@
 		p {
 			padding: 0 2rem;
 			font-size: 1.3rem;
-		}
-
-		@include large-devices() {
-			width: 30%;
-			font-size: 1.5rem;
 		}
 	}
 
