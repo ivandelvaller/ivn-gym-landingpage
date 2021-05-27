@@ -17,12 +17,12 @@ if (data && data.length !== 0) {
 } else {
 	instructors = [{
 		id: 0,
-		name: 'Lorena Del Valle',
+		name: 'Instructor 1',
 		info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere diam vel augue cursus dapibus. Curabitur non est nibh. Donec euismod justo id velit ornare fermentum. Vivamus in dolor lorem. ',
 		imageURL: 'https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png'
 	}, {
 		id: 1,
-		name: 'Lorena Olivares',
+		name: 'Instructor 2',
 		info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere diam vel augue cursus dapibus. Curabitur non est nibh. Donec euismod justo id velit ornare fermentum. Vivamus in dolor lorem. ',
 		imageURL: 'https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png'
 	}]
