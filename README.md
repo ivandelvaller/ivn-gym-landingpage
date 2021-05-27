@@ -1,1 +1,1 @@
-# Test of langin page for portfolio
+# Test of landing page for portfolio
