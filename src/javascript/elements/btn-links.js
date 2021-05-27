@@ -14,7 +14,7 @@ $links.addEventListener('click', event => {
 
 	if (target.classList.contains('link')) {
 		const name = target.innerText.toLowerCase().replace(' ', '-')
-		document.location = 'https://ivandelvaller.github.io/ivn-gym-landingpage/#' + name
+		window.location.hash = name
 
 		$btnNav.click()
 	}
