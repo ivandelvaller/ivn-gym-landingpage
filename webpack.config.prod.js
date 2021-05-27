@@ -5,11 +5,8 @@ module.exports = {
 	entry: './src/javascript/index.js',
 	output: {
 		path: path.resolve(__dirname, 'assets', 'scripts'),
-		filename: 'bundle.js',
+		filename: 'bundle.production.js',
 		publicPath: './assets/scripts/'
 	},
-	devtool: 'eval-cheap-module-source-map',
-	devServer: {
-	    writeToDisk: true,
-	}
+	devtool: 'source-map',
 }

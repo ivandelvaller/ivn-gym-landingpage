@@ -15,7 +15,8 @@ $links.addEventListener('click', event => {
 	if (target.classList.contains('link')) {
 		const name = target.innerText.toLowerCase().replace(' ', '-')
 		window.location.hash = name
-
+		console.log(window.location.hash)
+		event.preventDefault()
 		$btnNav.click()
 	}
 })
