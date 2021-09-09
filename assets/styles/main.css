@@ -82,6 +82,11 @@ body {
 #navigation .links .link-list .link:hover {
   background-color: #eb6664;
 }
+@media (min-width: 658px) {
+  #navigation .links .link-list .link {
+    font-size: 1.5rem;
+  }
+}
 #navigation .links.close {
   display: none;
 }
@@ -124,6 +129,11 @@ body {
   font-weight: 700;
   color: #fff;
 }
+@media (min-width: 658px) {
+  #header .header__second-section .information {
+    font-size: 2.5rem;
+  }
+}
 @media (min-width: 992px) {
   #header .header__second-section .information {
     font-size: 3.5rem;
@@ -152,7 +162,7 @@ body {
   padding: 1rem 2rem;
 }
 #about-us article h5 {
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 @media (min-width: 992px) {
   #about-us article h5 {
@@ -171,6 +181,7 @@ body {
 @media (min-width: 658px) {
   #about-us article .motivation {
     width: 80%;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -191,6 +202,11 @@ body {
   flex-direction: column;
   text-align: center;
 }
+@media (min-width: 992px) {
+  #instructors {
+    justify-content: center;
+  }
+}
 #instructors h4 {
   color: #fff;
   font-size: normal;
@@ -208,6 +224,11 @@ body {
   align-items: center;
   color: #8b4163;
 }
+@media (min-width: 992px) {
+  #instructors .instructors__header {
+    justify-self: flex-start;
+  }
+}
 #instructors .instructors__header h3 {
   position: relative;
   font-size: 2rem;
@@ -215,6 +236,11 @@ body {
 }
 #instructors .instructors__header p {
   padding: 0 2rem;
+}
+@media (min-width: 658px) {
+  #instructors .instructors__header p {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 992px) {
   #instructors .instructors__header p {
@@ -237,6 +263,9 @@ body {
 #instructors .instructor__container .instructor {
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 992px) {
   #instructors .instructor__container .instructor {
@@ -278,9 +307,16 @@ body {
   padding: 0.8rem 0;
   background-color: #f4a9a8;
   font-size: 700;
+  max-width: 650px;
+}
+@media (min-width: 658px) {
+  #instructors .instructor__container .instructor .instructor__name {
+    font-size: 1.3rem;
+  }
 }
 @media (min-width: 992px) {
   #instructors .instructor__container .instructor .instructor__name {
+    font-size: 1.5rem;
     border-radius: 5%;
     margin: 0.8rem;
   }
@@ -295,6 +331,7 @@ body {
   top: 0;
   color: #fff;
   text-align: center;
+  max-width: 650px;
 }
 #instructors .instructor__container .instructor .instructor__bio .instructor__bio--info {
   padding: 1rem;
@@ -302,12 +339,18 @@ body {
   color: #fff;
   z-index: 150;
 }
+@media (min-width: 658px) {
+  #instructors .instructor__container .instructor .instructor__bio .instructor__bio--info {
+    font-size: 1.5rem;
+  }
+}
 
 #contact-us {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  min-height: 100vh;
   color: #8b4163;
   height: auto;
   width: 100%;
@@ -338,6 +381,11 @@ body {
   padding: 0 2rem;
   font-size: 1.3rem;
 }
+@media (min-width: 658px) {
+  #contact-us .contact__header p {
+    font-size: 1.5rem;
+  }
+}
 #contact-us .icon {
   position: absolute;
   top: 0;
@@ -355,17 +403,18 @@ body {
 }
 @media (min-width: 658px) {
   #contact-us form {
-    max-width: 400px;
+    width: 550px;
     padding: 1rem;
     width: 80%;
     background-color: rgba(244, 169, 168, 0.5);
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
   #contact-us form {
     position: relative;
     right: 8rem;
-    max-width: 550px;
+    width: 750px;
     margin-bottom: 2rem;
     margin-left: 1rem;
     background-color: transparent;
@@ -382,14 +431,20 @@ body {
   background-color: #f4a9a8;
   font-size: 1rem;
   color: #8b4163;
-  padding: 0.6rem 0.4rem;
+  padding: 1rem 0.4rem;
   width: 60%;
+  height: auto;
   font-weight: 700;
   box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
 #contact-us form .button-group button:hover {
   background-color: #eb6664;
+}
+@media (min-width: 992px) {
+  #contact-us form .button-group button {
+    width: 400px;
+  }
 }
 #contact-us form .form-group {
   display: flex;
@@ -404,7 +459,7 @@ body {
 }
 #contact-us form .form-group input {
   font-size: inherit;
-  padding: 0.9rem 1rem;
+  padding: 1rem 1.2rem;
   border: none;
   width: 100%;
   outline: none;
@@ -471,10 +526,20 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 992px) {
+  #plan .plan-header {
+    font-size: 2rem;
+  }
+}
 #plan .plan-header p {
   text-align: center;
   padding: 0 2rem;
   color: #5a6b84;
+}
+@media (min-width: 992px) {
+  #plan .plan-header p {
+    font-size: 1.5rem;
+  }
 }
 #plan .plan-badge {
   margin-top: 2rem;
@@ -550,6 +615,11 @@ body {
     align-items: flex-start;
   }
 }
+@media (min-width: 992px) {
+  #plan .plan-badge .plan-description {
+    font-size: 1.5rem;
+  }
+}
 #plan .plan-badge .plan-description h5 {
   align-self: center;
   margin-top: 0.6rem;
@@ -595,6 +665,11 @@ body {
   width: 80%;
   text-align: center;
   color: #8b4163;
+}
+@media (min-width: 658px) {
+  #modal .modal-badge span {
+    font-size: 1.5rem;
+  }
 }
 #modal .modal-badge button {
   margin-top: 0.8rem;
@@ -643,6 +718,66 @@ body {
 #footer .designer i :active {
   color: blue;
   transform: scale(1.1);
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

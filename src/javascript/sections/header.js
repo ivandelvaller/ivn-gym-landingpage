@@ -32,26 +32,24 @@ const hideTextKeyframe = [
 	textIntervals(-50, 0)
 ]
 
-export const startHeaderAnimation = () => {
-	setInterval(() => {
-		$displaySection.innerText = information[counter]
-	
+setInterval(() => {
+	$displaySection.innerText = information[counter]
+
+	startAnimation(
+		$displaySection,
+		showTextKeyframe, {
+			duration: 3000,
+			delay: 0
+		}
+	).finished.then(() =>
 		startAnimation(
 			$displaySection,
-			showTextKeyframe, {
-				duration: 3000,
-				delay: 0
-			}
-		).finished.then(() =>
-			startAnimation(
-				$displaySection,
-				hideTextKeyframe, {
-					duration: 2500,
-					delay: 1000
-				})
-		)
-	
-		if (counter === information.length - 1) counter = 0
-		else counter++
-	}, 6500)
-}
+			hideTextKeyframe, {
+				duration: 2500,
+				delay: 1000
+			})
+	)
+
+	if(counter === information.length - 1) counter = 0
+	else counter++
+}, 6500)

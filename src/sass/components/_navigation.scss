@@ -32,6 +32,10 @@
                 &:hover {
                     background-color: darken($pink-color, 15%);
                 }
+
+                @include medium-devices() {
+                    font-size: 1.5rem;
+                }
             }
         }
 

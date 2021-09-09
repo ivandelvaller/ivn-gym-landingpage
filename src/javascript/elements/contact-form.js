@@ -21,6 +21,7 @@ const formElementsValidation = {
 	},
 	phone: {
 		phone: true,
+		required: false,
 	}
 }
 
@@ -33,7 +34,7 @@ $form.addEventListener('submit', event => {
 	const inputsList = event.target.querySelectorAll('input')
 
 	// Check if values are correct
-	inputsList.forEach((input, index) => {
+	inputsList.forEach((input) => {
 		if (input.classList.contains('input-error')) {
 			input.classList.toggle('input-error')
 		}
@@ -43,7 +44,7 @@ $form.addEventListener('submit', event => {
 		const uFieldName = `${fieldName.charAt(0).toUpperCase()}${fieldName.slice(1).toLowerCase()}`
 		const field = formElementsValidation[fieldName]
 
-		if (field['required'] && fieldValue === "") {
+		if (field['required'] && fieldValue === '') {
 			errors.push({
 				field: fieldName,
 				errorMessage: `${uFieldName} is required`

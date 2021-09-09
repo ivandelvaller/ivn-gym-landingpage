@@ -19,6 +19,10 @@
 			width: 80%;
 			text-align: center;
 			color: darken($purple-color, 30%);
+
+			@include medium-devices() {
+				font-size: 1.5rem;
+			}
 		}
 
 		button {

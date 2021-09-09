@@ -6,6 +6,10 @@
     flex-direction: column;
     text-align: center;
 
+    @include large-devices() {
+        justify-content: center;
+    }
+
     h4 {
         color: #fff;
         font-size: normal;
@@ -24,6 +28,10 @@
         align-items: center;
         color: darken($purple-color, 30%);
 
+        @include large-devices() {
+            justify-self: flex-start;
+        }
+
         h3 {
             position: relative;
             font-size: 2rem;
@@ -33,6 +41,11 @@
 
         p {
             padding: 0 2rem;
+
+            @include medium-devices() {
+                font-size: 1.5rem;
+            }
+
             @include large-devices() {
                 width: 50%;
             }
@@ -54,6 +67,9 @@
         .instructor {
             width: 100%;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             @include large-devices() {
                 margin: 0 1rem;
@@ -98,8 +114,14 @@
                 padding: 0.8rem 0;
                 background-color: $pink-color;
                 font-size: 700;
+                max-width: 650px;
+
+                @include medium-devices() {
+                    font-size: 1.3rem;
+                }
 
                 @include large-devices() {
+                    font-size: 1.5rem;
                     border-radius: 5%;
                     margin: 0.8rem;
                 }
@@ -114,12 +136,17 @@
                 top: 0;
                 color: #fff;
                 text-align: center;
+                max-width: 650px;
 
         		.instructor__bio--info {
                     padding: 1rem;
                     width: 100%;
                     color: #fff;
                     z-index: 150;
+
+                    @include medium-devices() {
+                        font-size: 1.5rem;
+                    }
         		}
         	}
         }

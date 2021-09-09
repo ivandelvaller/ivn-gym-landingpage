@@ -32,6 +32,10 @@
             font-weight: 700;
             color: #fff;
 
+            @include medium-devices() {
+                font-size: 2.5rem;
+            }
+
             @include large-devices() {
                 font-size: 3.5rem;
             }
