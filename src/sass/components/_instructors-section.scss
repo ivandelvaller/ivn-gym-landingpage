@@ -110,13 +110,13 @@
                 position: absolute;
                 background-color: transparent;
                 @include display-flex(1);
-                height: 100%;
+                height: 80%;
                 top: 0;
                 color: #fff;
                 text-align: center;
 
         		.instructor__bio--info {
-                    padding: 1.5rem;
+                    padding: 1rem;
                     width: 100%;
                     color: #fff;
                     z-index: 150;

@@ -10,4 +10,8 @@ import './elements/alert'
 import './elements/btn-links'
 
 // IMPORTING SECTIONS
-import './sections/header'
+import { startHeaderAnimation } from './sections/header'
+
+document.onload = function () {
+    startHeaderAnimation();
+}

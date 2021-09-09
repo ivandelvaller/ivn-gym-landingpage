@@ -29,7 +29,7 @@
 
 // MEDIA QUERY
 @mixin small-devices() {
-    @media (min-width: $small-devices) {
+    @media (max-width: $small-devices) {
         @content;
     }
 }
